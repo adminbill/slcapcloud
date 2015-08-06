@@ -1,0 +1,17 @@
+@CHARSET "UTF-8";
+
+.navbar, .navbar-default{
+	background:#4093E6;
+}
+.btn, .btn-primary{
+	background:#4093E6;
+}
+.nav.navbar-nav li a {
+	color:black;
+}
+.navbar-header {
+	text-color:white;
+	&:hover, &:focus { 
+      color: white; 
+    }
+}

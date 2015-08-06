@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Login</title>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" 
+	rel="stylesheet">
+<link href="css/LoginStyle.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="js/Login.js"></script>	
+</head>
+<body style="background:#eee;">
+	<div class="container">
+		<p><br/></p>
+		<div class="row">
+			<div class="col-md-12">
+				<nav class="navbar navbar-default navbar-fixed-top">
+  					<div class="container-fluid">
+    					<div class="navbar-header">
+      						<a class="navbar-brand" href="#">CLOUD</a>
+    					</div>
+    					<div>
+      						<ul class="nav navbar-nav navbar-right">
+        					<li ><a href="#"><span class="glyphicon glyphicon-log-in"></span> Log In</a></li> 
+      						</ul>
+    					</div>
+  					</div>
+				</nav>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-md-4">
+			</div>
+			<div id="loginPanel" class="col-md-4">
+				<div class="panel panel-primary">
+					<div class="panel-body">
+						<div class="page-header">
+							<h3 align="center">Login</h3>
+						</div>
+						<form role="form">
+							<div class="form-group">
+								<label for="exampleInputEmail1">Email</label>
+								<input type="email" class="form-control" id="inputdefault1" type="text" placeholder="Email">
+							</div>
+							<div class="form-group">
+								<label for="exampleInputPassword1">Password</label>
+								<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+							</div>
+							<div class="form-group">
+								<label>Your Cloud:</label>
+								<select class="form-control" id="sel1">
+  								</select>
+							</div>
+							<hr/>
+							<div style="text-align:center">
+								<button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Login</button>
+							</div>
+							<p><br/></p>
+						</form>
+					</div>
+				</div>
+				<div id="myModal" class="modal fade" role="dialog">
+  					<div class="modal-dialog">
+    					<!-- Modal content-->
+    					<div class="modal-content">
+      						<div class="modal-header">
+        						<button type="button" class="close" data-dismiss="modal">&times;</button>
+        						<h4 class="modal-title">Please enter the Key</h4>
+      						</div>
+      						<div class="modal-body">
+        						<input class="form-control" id="Key1" type="text" placeholder="Key">
+      						</div>
+      						<div class="modal-footer">
+        						<button type="button" class="btn btn-default" data-dismiss="modal">Submit</button>
+      						</div>
+    					</div>
+  					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+			</div>
+		</div>
+	</div>
+</body>
+</html>
