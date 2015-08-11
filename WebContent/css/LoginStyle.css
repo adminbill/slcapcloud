@@ -3,15 +3,16 @@
 .navbar, .navbar-default{
 	background:#4093E6;
 }
-.btn, .btn-primary{
+.btn, .btn-info{
 	background:#4093E6;
 }
 .nav.navbar-nav li a {
-	color:black;
+	color:#000000;
 }
-.navbar-header {
-	text-color:white;
-	&:hover, &:focus { 
-      color: white; 
-    }
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+color: #000000;  /*Sets the text hover color on navbar*/
+}
+
+#header1{
+	color:#ffffff;
 }
