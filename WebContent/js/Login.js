@@ -2,14 +2,6 @@
  * 
  */
 
-function showLoginPanel(email){
-	function validateEmail(email) 
-	{
-	    var re = /\S+@\S+\.\S+/;
-	    return re.test(email);
-	}
-}
-
 $(document).ready(function(){
 	$('#loginPanel1').hide();
 	$('#registerPanel1').hide();
@@ -24,6 +16,83 @@ $(document).ready(function(){
 	}
 });
 
+$(function () {
+	$('#login1').on('click', function() {
+		$('#loginform1').bootstrapValidator({
+			message: 'This value is not valid',
+			feedbackIcons: {
+				valid: 'glyphicon glyphicon-ok',
+				invalid: 'glyphicon glyphicon-remove',
+				validating: 'glyphicon glyphicon-refresh'
+			},
+			fields: {
+				username: {
+					message: 'The username is not valid',
+					validators: {
+						notEmpty: {
+							message: 'The username cannot be empty'
+						},
+					}
+				},
+			}
+		})
+	})
+});
+
+$(function () {
+	$('#signup1').on('click', function() {
+		$('#signupform1').bootstrapValidator({
+			message: 'This value is not valid',
+			feedbackIcons: {
+				valid: 'glyphicon glyphicon-ok',
+				invalid: 'glyphicon glyphicon-remove',
+				validating: 'glyphicon glyphicon-refresh'
+			},
+			fields: {
+				fname: {
+					message: 'First Name is not valid',
+					validators: {
+						notEmpty: {
+							message: 'First Name cannot be empty'
+						},
+					}
+				},
+				lname: {
+					message: 'Last Name is not valid',
+					validators: {
+						notEmpty: {
+							message: 'Last Name cannot be empty'
+						},
+					}
+				},
+				username: {
+					message: 'The username is not valid',
+					validators: {
+						notEmpty: {
+							message: 'The username cannot be empty'
+						},
+					}
+				},
+				passwd: {
+					message: 'Password is not valid',
+					validators: {
+						notEmpty: {
+							message: 'Password cannot be empty'
+						},
+					}
+				},
+				key: {
+					message: 'Key is not valid',
+					validators: {
+						notEmpty: {
+							message: 'Key cannot be empty'
+						},
+					}
+				},
+			}
+		})
+	})
+});
 
 $(function () {
 	$('#logIn1').on('click', function(){
