@@ -7,12 +7,19 @@ $(document).ready(function(){
 });
 
 function createDashboard(){
+	var xmlhttp = new XMLHttpRequest();
+	xmlhttp.open("GET", url, true);
+	xmlhttp.send();
+	xmlhttp.onreadystatechange=function() {
+	    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+	    	var obj = JSON.parse(xmlhttp.responseText);
+	    }
+	}
 	var sessions = new Array(
 	        {"Category": "Low", "Avg CPU Usage": "50"},
 	        {"Category": "Medium", "Avg CPU Usage": "50"},
 	        {"Category": "High", "Avg CPU Usage": "50"}
-	 );
-	      
+	 );    
 	 // create the table header
 	 var thead = d3.select("thead").selectAll("th")
 	.data(d3.keys(sessions[0]))
